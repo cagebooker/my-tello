@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyTello</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_pack_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <section class="flex flex-col h-screen bg-red-100 overflow-hidden">
+      <%= render 'shared/navbar' %>
+      <%= render 'shared/flash' if notice %>
+      <div class="overflow-auto bg-blue-300 h-full">
+        <%= yield %>
+      </div>
+    </section>
+  </body>
+</html>
